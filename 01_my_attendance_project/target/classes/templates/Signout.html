@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        /* Optional: Style the buttons */
+        form {
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Today Date & time</h1>
+    
+    <!-- Thymeleaf expressions to display date and time -->
+    <h1 th:text="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}"></h1>
+    <h1 th:text="${#dates.format(#dates.createNow(), 'HH:mm:ss')}"></h1>
+    
+    <form action="/Signout" >
+        <button type="submit">Sign out</button>
+    </form>
+    
+    <form action="/report" >
+        <button type="submit">Report</button>
+    </form>
+    
+    <h1>view</h1>
+</body>
+</html>

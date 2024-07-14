@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+    }
+    h1 {
+        color: #333333;
+        font-size: 24px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: #555555;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<form action="/login" method="post">
+    <h1>Login Page</h1>
+    <label for="uname">Username:</label>
+    <input type="text" id="uname" name="username" required>
+    <br>
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" name="password" required>
+    <br>
+    <input type="submit" value="Login">
+    <!-- Uncomment below if you want to include a register button -->
+    <!-- <a href="Register.html"> 
+        <input type="button" value="Register">
+    </a> -->
+</form>
+
+</body>
+</html>
